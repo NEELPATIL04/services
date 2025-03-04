@@ -19,7 +19,7 @@ export function ClientCategoriesSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <ClientCategory 
-            icon={<Building2 className="h-10 w-10" />}
+            icon={<Building2 className="h-10 w-10 text-red-500" />}
             title="Enterprise"
             description="Comprehensive solutions for established businesses looking to innovate and scale their digital presence"
             benefits={[
@@ -33,7 +33,7 @@ export function ClientCategoriesSection() {
           />
           
           <ClientCategory 
-            icon={<UserRound className="h-10 w-10" />}
+            icon={<UserRound className="h-10 w-10 text-orange-400" />}
             title="Solo Entrepreneurs"
             description="Agile and affordable solutions to help solopreneurs bring their ideas to market quickly"
             benefits={[
@@ -48,7 +48,7 @@ export function ClientCategoriesSection() {
           />
           
           <ClientCategory 
-            icon={<GraduationCap className="h-10 w-10" />}
+            icon={<GraduationCap className="h-10 w-10 text-pink-600" />}
             title="College Students"
             description="Educational resources and project support for students building their tech portfolio"
             benefits={[

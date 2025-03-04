@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Code className="h-6 w-6 text-primary" />
-              <span className="font-bold text-lg">TechSolutions</span>
+              
+              <span className="font-bold text-lg">WEBDRIFT</span>
             </div>
             <p className="text-muted-foreground">
               Building the future with modern web technologies.

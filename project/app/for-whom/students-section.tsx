@@ -1,12 +1,12 @@
-    // components/who-we-serve/students-section.tsx
+// components/who-we-serve/students-section.tsx
 "use client"
 
 import React from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { GraduationCap, Code, Users, Lightbulb, ArrowRight } from "lucide-react"
 import { ParallaxSection } from "@/components/parallax-section"
 import { ScrollReveal } from "@/components/scroll-reveal"
-import { ParallaxImage } from "@/components/parallax-image"
 import { FeatureItem } from "./feature-item"
 
 export function StudentsSection() {
@@ -19,12 +19,13 @@ export function StudentsSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <ScrollReveal direction="left" distance={50}>
-            <div className="relative h-[500px] rounded-lg overflow-hidden">
-              <ParallaxImage 
-                src="https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+            <div className="relative h-[450px] rounded-lg overflow-hidden hidden lg:block">
+              <Image 
+                src="/4-small.png"
                 alt="Student Solutions"
-                speed={0.1}
-                className="rounded-lg"
+                width={400}
+                height={400}
+                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[60%] rounded-lg shadow-lg z-10"
               />
             </div>
           </ScrollReveal>
@@ -32,7 +33,7 @@ export function StudentsSection() {
           <ScrollReveal direction="right" distance={50}>
             <div>
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6">
-                <GraduationCap className="h-8 w-8" />
+                <GraduationCap className="h-8 w-8 text-pink-500" />
               </div>
               <h2 className="text-3xl font-bold mb-6">Student Resources</h2>
               <p className="text-muted-foreground mb-8">

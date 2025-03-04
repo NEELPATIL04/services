@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button"
 import { Building2, ShieldCheck, Users, BarChart3, ArrowRight } from "lucide-react"
 import { ParallaxSection } from "@/components/parallax-section"
 import { ScrollReveal } from "@/components/scroll-reveal"
-import { ParallaxImage } from "@/components/parallax-image"
 import { FeatureItem } from "./feature-item"
 
 export function EnterpriseSection() {
@@ -20,30 +19,21 @@ export function EnterpriseSection() {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <ScrollReveal direction="left" distance={50}>
-                        <div className="relative h-[500px] rounded-lg overflow-hidden">
-                            {/* Existing Image */}
-                            <ParallaxImage
-                                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
-                                alt="Enterprise Solutions"
-                                speed={0.1}
-                                className="rounded-lg"
-                            />
-                            {/* New Image Below */}
+                        <div className="relative h-[400px] rounded-lg overflow-hidden hidden lg:block">
                             <Image
                                 src="/image-3.png"
                                 alt="New Illustration"
-                                width={400}
+                                width={300}
                                 height={300}
                                 className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[80%] rounded-lg shadow-lg z-10"
                             />
-
                         </div>
                     </ScrollReveal>
 
                     <ScrollReveal direction="right" distance={50}>
                         <div>
                             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6">
-                                <Building2 className="h-8 w-8" />
+                                <Building2 className="h-8 w-8  text-red-500" />
                             </div>
                             <h2 className="text-3xl font-bold mb-6">Enterprise Solutions</h2>
                             <p className="text-muted-foreground mb-8">

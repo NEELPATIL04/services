@@ -1,32 +1,34 @@
-// components/who-we-serve/hero-section.tsx
-"use client"
-
-import React from "react"
-import { ParallaxImage } from "@/components/parallax-image"
-import { ScrollReveal } from "@/components/scroll-reveal"
+'use client'
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Layers } from "lucide-react"; // Importing an icon from Lucide
 
 export function HeroSection() {
   return (
-    <section className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <ParallaxImage
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-          alt="Who We Serve Background"
-          speed={0.2}
-          className="opacity-20 dark:opacity-10"
-        />
-      </div>
+    <div className="relative flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 py-16 bg-white text-black dark:bg-black dark:text-white">
       
-      <div className="container mx-auto px-4 relative z-10">
-        <ScrollReveal className="max-w-3xl" direction="up" distance={50}>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Who We Serve
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8">
-            Tailored tech solutions for businesses and individuals at every stage of growth
-          </p>
-        </ScrollReveal>
+      {/* Left Content */}
+      <div className="max-w-2xl text-center lg:text-left">
+        <h1 className="text-3xl sm:text-4xl font-bold">For whom</h1>
+        <p className="mt-4 text-base sm:text-lg">
+          We offer a comprehensive range of web development services using cutting-edge technologies to help businesses thrive in the digital landscape.
+        </p>
+        <Button asChild className="mt-6">
+          <Link href="/contact">Get in Touch</Link>
+        </Button>
       </div>
-    </section>
-  )
+
+      {/* Right Side Icon (Moves below text on small screens) */}
+      <div className="mt-6 lg:mt-0 lg:absolute lg:right-10 lg:top-1/2 lg:-translate-y-1/2">
+        <Layers className="w-24 h-24 sm:w-40 sm:h-40 text-yellow-300 neon-glow sm:mr-8" />
+      </div>
+
+      {/* Tailwind Neon Effect (Optional) */}
+      <style jsx>{`
+        .neon-glow {
+          filter: drop-shadow(0 0 10px #ff00ff) drop-shadow(0 0 20px #ff00ff);
+        }
+      `}</style>
+    </div>
+  );
 }
