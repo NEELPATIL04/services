@@ -9,7 +9,7 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 
 export function CTASection() {
   return (
-    <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
+    <section className="py-24 bg-white dark:bg-black text-primary-foreground relative overflow-hidden">
       <ParallaxSection speed={0.1} direction="up" className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary"></div>
         <Image
