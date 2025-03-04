@@ -56,8 +56,18 @@ export default function TechStackSection() {
   ];
 
   return (
-    <section className="py-24 relative bg-[#1c1d1e]  overflow-hidden">
-      <div className="container  bg-[#1c1d1e] mx-auto px-4">
+    <section className="py-24 relative bg-white dark:bg-[#1c1d1e]  overflow-hidden">
+           <div className="absolute inset-0 w-full h-full">
+        <div 
+          className="absolute w-[200%] h-[200px] bg-gradient-to-r from-transparent via-blue-100/30 to-transparent dark:via-white/10 blur-[100px] transition-colors duration-300"
+          style={{ 
+            top: '30%', 
+            left: '-90%',
+            transform: 'rotate(0deg)'
+          }}
+        />
+      </div>
+      <div className="container bg- white dark:bg-[#1c1d1e] mx-auto px-4">
         <ScrollReveal className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Tech Stack</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">

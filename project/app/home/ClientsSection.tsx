@@ -8,7 +8,7 @@ import { Building2, User, GraduationCap, Code } from "lucide-react"
 
 export default function ClientsSection() {
   return (
-    <section className="py-24 relative overflow-hidden bg-muted/30">
+    <section className="py-24 relative overflow-hidden bg-muted/30  dark:bg-[#1c1d1e]">
       <ParallaxSection speed={0.2} direction="left" className="absolute -right-64 top-0 opacity-10 z-0">
         <Code className="h-[600px] w-[600px] text-primary" />
       </ParallaxSection>

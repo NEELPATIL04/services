@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react"
 
 export default function FeaturedProjectSection() {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden dark:bg-[#1c1d1e]">
       <div className="container mx-auto px-4">
         <ScrollReveal className="mb-16 max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Project</h2>

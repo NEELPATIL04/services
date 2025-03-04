@@ -55,9 +55,9 @@ const Navbar = () => {
               </Link>
             ))}
             <ThemeToggle />
-            <Button asChild>
+            {/* <Button asChild>
               <Link href="/contact">Get Started</Link>
-            </Button>
+            </Button> */}
           </nav>
 
           {/* Mobile Navigation Toggle */}
@@ -71,7 +71,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation Menu */}
         {isOpen && (
-          <div className="md:hidden pt-4 pb-2">
+          <div className="md:hidden  bg-white dark:bg-[#1c1d1e] pt-4 pb-2">
             <nav className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <Link 
@@ -83,9 +83,9 @@ const Navbar = () => {
                   {link.label}
                 </Link>
               ))}
-              <Button asChild className="w-full mt-2">
+              {/* <Button asChild className="w-full mt-2">
                 <Link href="/contact" onClick={() => setIsOpen(false)}>Get Started</Link>
-              </Button>
+              </Button> */}
             </nav>
           </div>
         )}

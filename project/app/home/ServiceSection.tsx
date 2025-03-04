@@ -1,4 +1,3 @@
-// components/sections/ServicesSection.jsx
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ParallaxSection } from "@/components/parallax-section"
@@ -15,8 +14,20 @@ import {
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-20 bg-white dark:bg-[#1c1d1e] transition-colors duration-300">
-      <div className="container mx-auto px-4">
+    <section id="services" className="relative py-20 bg-white dark:bg-[#1c1d1e] transition-colors duration-300">
+      {/* Adjusted Diagonal Glow Effect from HeroSection */}
+      {/* <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <div 
+          className="absolute w-[200%] h-[300px] bg-gradient-to-r from-transparent via-blue-100/30 to-transparent dark:via-white/10 blur-[100px] transition-colors duration-300"
+          style={{ 
+            top: '-40%', 
+            left: '-15%',  // Adjusted from -65% to -25% to shift more to the right
+            transform: 'rotate(35deg)'
+          }}
+        />
+      </div> */}
+      
+      <div className="container relative z-10 mx-auto px-4">
         <div className="text-center mb-16">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
@@ -76,11 +87,11 @@ export default function ServicesSection() {
         </div>
 
         <div className="text-center mt-16">
-        <Button asChild className="rounded-md bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600">
-          <Link href="/services">
-            View All Services
-          </Link>
-        </Button>
+          <Button asChild className="rounded-md bg-blue-600 hover:bg-blue-700 text-white dark:text-black dark:bg-white ">
+            <Link href="/services">
+              View All Services
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
