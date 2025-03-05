@@ -1,7 +1,14 @@
-// components/cards/ClientCard.jsx
 import { Card, CardContent } from "@/components/ui/card"
+import React from "react"
 
-export function ClientCard({ icon, title, description }) {
+// Define an interface for the component props
+interface ClientCardProps {
+  icon: React.ReactNode
+  title: string
+  description: string
+}
+
+export function ClientCard({ icon, title, description }: ClientCardProps) {
   return (
     <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden border-none h-full">
       <CardContent className="p-6 h-full flex flex-col items-center text-center">

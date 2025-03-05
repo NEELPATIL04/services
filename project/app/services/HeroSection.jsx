@@ -1,5 +1,4 @@
 'use client'
-
 import { Code, Server, GitMerge } from "lucide-react";
 
 export function HeroSection() {

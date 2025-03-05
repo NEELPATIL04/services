@@ -1,7 +1,12 @@
 // components/cards/ServiceCard.jsx
 import { Card, CardContent } from "@/components/ui/card"
 
-export function ServiceCard({ icon, title, description }) {
+interface ClientCardProps {
+  icon: React.ReactNode
+  title: string
+  description: string
+}
+export function ServiceCard({ icon, title, description }: ClientCardProps) {
   return (
     <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden border-none bg-card/50 backdrop-blur-sm h-full">
       <CardContent className="p-6 h-full flex flex-col">

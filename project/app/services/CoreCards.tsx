@@ -1,8 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card"
+import React from "react"
 
-export function CoreCard({ icon, title, description }) {
+// Define an interface for the component props
+interface CoreCardProps {
+  icon: React.ReactNode
+  title: string
+  description: string
+}
+
+export function CoreCard({ icon, title, description }: CoreCardProps) {
   return (
-   // relative p-[2.30px] bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 rounded-xl
     <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden border-none  backdrop-blur-sm h-full">
       <CardContent className="p-6 h-full flex flex-col">
         <div className="mb-4 text-primary  p-3 rounded-lg inline-block">

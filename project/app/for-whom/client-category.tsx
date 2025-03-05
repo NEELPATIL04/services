@@ -1,4 +1,3 @@
-// components/who-we-serve/client-category.tsx
 "use client"
 
 import React from "react"
@@ -8,13 +7,14 @@ import { ArrowRight } from "lucide-react"
 import { ParallaxImage } from "@/components/parallax-image"
 import { ScrollReveal } from "@/components/scroll-reveal"
 
+// Updated type definition to allow string while still maintaining type safety
 interface ClientCategoryProps {
   icon: React.ReactNode
   title: string
   description: string
   benefits: string[]
   image: string
-  direction?: string
+  direction?: "none" | "right" | "left" | "up" | "down" | string
   delay?: number
 }
 
@@ -28,7 +28,16 @@ export function ClientCategory({
   delay = 0
 }: ClientCategoryProps) {
   return (
-    <ScrollReveal direction={direction} delay={delay} distance={30}>
+    <ScrollReveal 
+      direction={
+        // Type assertion to handle potential string values
+        ["none", "right", "left", "up", "down"].includes(direction as string) 
+          ? direction as "none" | "right" | "left" | "up" | "down" 
+          : "up"
+      } 
+      delay={delay} 
+      distance={30}
+    >
       <div className="bg-card rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
         <div className="relative h-48">
           <ParallaxImage 

@@ -2,7 +2,14 @@
 
 import { useEffect, useState, useRef } from "react";
 
-const cards = [
+interface TestimonialCard {
+  id: number;
+  title: string;
+  subtitle: string;
+  content: string;
+}
+
+const cards: TestimonialCard[] = [
   {
     id: 1,
     title: "Henry Rausch",
@@ -36,21 +43,21 @@ const cards = [
 ];
 
 export default function CTASection() {
-  const [position, setPosition] = useState(0);
-  const animationRef = useRef(null);
-  const containerRef = useRef(null);
+  const [position, setPosition] = useState<number>(0);
+  const animationRef = useRef<number | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const scrollSpeed = 0.01; // Adjust speed as needed
 
   // Duplicate cards multiple times to ensure continuous scroll
-  const duplicatedCards = [...cards, ...cards, ...cards, ...cards, ...cards];
+  const duplicatedCards: TestimonialCard[] = [...cards, ...cards, ...cards, ...cards, ...cards];
 
   const startAnimation = () => {
-    if (animationRef.current) return;
+    if (animationRef.current !== null) return;
     animationRef.current = requestAnimationFrame(animate);
   };
 
   const stopAnimation = () => {
-    if (animationRef.current) {
+    if (animationRef.current !== null) {
       cancelAnimationFrame(animationRef.current);
       animationRef.current = null;
     }
