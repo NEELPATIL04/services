@@ -59,7 +59,7 @@ export function SoloEntrepreneurSection() {
                 alt="Solo Entrepreneur Illustration"
                 width={600}
                 height={600}
-                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[80%] rounded-lg shadow-lg z-10"
+                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[80%] rounded-lg z-10"
               />
             </div>
           </ScrollReveal>

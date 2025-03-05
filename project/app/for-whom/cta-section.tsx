@@ -9,7 +9,7 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 
 export function CTASection() {
   return (
-    <section className="py-24 bg-white dark:bg-black text-primary-foreground relative overflow-hidden">
+    <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
       <ParallaxSection speed={0.1} direction="up" className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary"></div>
         <Image
@@ -24,7 +24,7 @@ export function CTASection() {
         <ScrollReveal className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Journey?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Whether you're an enterprise, entrepreneur, or student, we have the expertise to help you succeed in your digital endeavors.
+            Whether you re an enterprise, entrepreneur, or student, we have the expertise to help you succeed in your digital endeavors.
           </p>
           <Button size="lg" variant="secondary" asChild>
             <a href="/contact">Get in Touch</a>

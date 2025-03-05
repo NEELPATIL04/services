@@ -25,7 +25,7 @@ export function StudentsSection() {
                 alt="Student Solutions"
                 width={400}
                 height={400}
-                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[60%] rounded-lg shadow-lg z-10"
+                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[60%] rounded-lg  z-10"
               />
             </div>
           </ScrollReveal>

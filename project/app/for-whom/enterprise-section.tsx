@@ -25,7 +25,7 @@ export function EnterpriseSection() {
                                 alt="New Illustration"
                                 width={300}
                                 height={300}
-                                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[80%] rounded-lg shadow-lg z-10"
+                                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[80%] rounded-lg  z-10"
                             />
                         </div>
                     </ScrollReveal>
