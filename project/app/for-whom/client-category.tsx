@@ -4,7 +4,6 @@ import React from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import { ParallaxImage } from "@/components/parallax-image"
 import { ScrollReveal } from "@/components/scroll-reveal"
 
 // Updated type definition to allow string while still maintaining type safety
@@ -40,10 +39,14 @@ export function ClientCategory({
     >
       <div className="bg-card rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
         <div className="relative h-48">
-          <ParallaxImage 
+          {/* Replaced ParallaxImage with regular Image component */}
+          <Image 
             src={image}
             alt={title}
-            speed={0.1}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+            priority
           />
         </div>
         <div className="p-6">

@@ -1,4 +1,3 @@
-// components/who-we-serve/client-categories-section.tsx
 "use client"
 
 import React from "react"
@@ -8,7 +7,7 @@ import { ClientCategory } from "./client-category"
 
 export function ClientCategoriesSection() {
   return (
-    <section className="py-24 bg-muted/50">
+    <section className="py-24 bg-white dark:bg-[#1c1d1e]">
       <div className="container mx-auto px-4">
         <ScrollReveal className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Our Clients</h2>
@@ -28,7 +27,8 @@ export function ClientCategoriesSection() {
               "Digital transformation services",
               "Advanced security protocols"
             ]}
-            image="https://images.unsplash.com/photo-1560179707-f14e90ef3623?ixlib=rb-4.0.3&auto=format&fit=crop&w=1478&q=80"
+            // Make sure this image exists in your public directory
+            image="/ent2.jpeg" 
             direction="up"
           />
           
@@ -42,7 +42,8 @@ export function ClientCategoriesSection() {
               "Growth-focused design",
               "Budget-friendly options"
             ]}
-            image="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+            // Using placeholder image with proper URL format
+            image="/api/placeholder/800/600" 
             direction="up"
             delay={0.1}
           />
@@ -57,7 +58,8 @@ export function ClientCategoriesSection() {
               "Project collaboration",
               "Portfolio development"
             ]}
-            image="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+            // Using placeholder image with proper URL format
+            image="/api/placeholder/800/600"
             direction="up"
             delay={0.2}
           />

@@ -27,7 +27,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main>{children}</main>
+          <main className='bg-white dark:bg-[#1c1d1e]'>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
