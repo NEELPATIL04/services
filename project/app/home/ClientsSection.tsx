@@ -1,4 +1,3 @@
-// components/sections/ClientsSection.jsx
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ScrollReveal } from "@/components/scroll-reveal"
@@ -23,25 +22,31 @@ export default function ClientsSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <ScrollReveal delay={0.2} direction="left" distance={30}>
-            <ClientCard 
-              icon={<Building2 />}
-              title="Enterprise"
-              description="Scalable solutions for large organizations looking to modernize their digital infrastructure and streamline operations."
-            />
+            <Link href="/service/enterprise">
+              <ClientCard 
+                icon={<Building2 />}
+                title="Enterprise"
+                description="Scalable solutions for large organizations looking to modernize their digital infrastructure and streamline operations."
+              />
+            </Link>
           </ScrollReveal>
           <ScrollReveal delay={0.4} direction="up" distance={30}>
-            <ClientCard 
-              icon={<User />}
-              title="Solo Entrepreneurs"
-              description="Affordable, high-quality web solutions to help startups and solo founders bring their ideas to market quickly."
-            />
+            <Link href="/service/solo-entrepreneur">
+              <ClientCard 
+                icon={<User />}
+                title="Solo Entrepreneurs"
+                description="Affordable, high-quality web solutions to help startups and solo founders bring their ideas to market quickly."
+              />
+            </Link>
           </ScrollReveal>
           <ScrollReveal delay={0.2} direction="right" distance={30}>
-            <ClientCard 
-              icon={<GraduationCap />}
-              title="Educational Institutions"
-              description="Custom platforms for colleges and educational organizations to enhance learning experiences and administrative efficiency."
-            />
+            <Link href="/service/student">
+              <ClientCard 
+                icon={<GraduationCap />}
+                title="Educational Institutions"
+                description="Custom platforms for colleges and educational organizations to enhance learning experiences and administrative efficiency."
+              />
+            </Link>
           </ScrollReveal>
         </div>
         

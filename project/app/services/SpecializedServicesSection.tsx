@@ -1,4 +1,3 @@
-// src/components/services/SpecializedServicesSection.jsx
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { ServiceCard } from "./ServiceCard";
 import { 

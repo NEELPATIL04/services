@@ -218,12 +218,7 @@ export default function Services() {
                         ))}
                       </ul>
                     </div>
-                    <div className="mt-auto p-3 bg-gray-100 dark:bg-gray-800/70 border-t border-gray-200 dark:border-gray-700">
-                      <button className="w-full py-2 px-4 bg-purple-500 hover:bg-purple-600 text-white rounded-lg transition-colors flex items-center justify-center text-sm font-medium">
-                        Learn More
-                        <ChevronRight className="h-4 w-4 ml-1" />
-                      </button>
-                    </div>
+                   
                   </motion.div>
                 ))}
               </div>

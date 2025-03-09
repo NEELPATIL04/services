@@ -8,6 +8,7 @@ import { UserRound, Lightbulb, Clock, PenTool, HeartHandshake, ArrowRight } from
 import { ParallaxSection } from "@/components/parallax-section"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { FeatureItem } from "./feature-item"
+import Link from "next/link"
 
 export function SoloEntrepreneurSection() {
   return (
@@ -45,10 +46,11 @@ export function SoloEntrepreneurSection() {
                   description="Technical partnership that provides not just implementation but strategic guidance as your business evolves."
                 />
               </div>
-              
+              <Link href="/service/solo-entrepreneur">
               <Button>
                 Entrepreneur Solutions <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
+              </Link>
             </div>
           </ScrollReveal>
           

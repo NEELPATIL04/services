@@ -169,12 +169,7 @@ export default function Services() {
                         ))}
                       </ul>
                     </div>
-                    <div className="mt-auto p-3 bg-gray-100 dark:bg-gray-800/70 border-t border-gray-200 dark:border-gray-700">
-                      <button className="w-full py-2 px-4 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors flex items-center justify-center text-sm font-medium">
-                        Learn More
-                        <ChevronRight className="h-4 w-4 ml-1" />
-                      </button>
-                    </div>
+                    
                   </motion.div>
                 ))}
               </div>
@@ -188,12 +183,12 @@ export default function Services() {
                   Our team of experts is ready to help you implement the perfect enterprise solutions for your business needs.
                 </p>
                 <div className="flex flex-wrap gap-3">
+                  <Link href="/contact">
                   <button className="py-2 px-5 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors flex items-center justify-center text-sm font-medium">
                     Schedule a Consultation
                   </button>
-                  <button className="py-2 px-5 bg-white dark:bg-gray-700 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-gray-600 rounded-lg transition-colors flex items-center justify-center text-sm font-medium hover:bg-blue-50 dark:hover:bg-gray-600">
-                    View Case Studies
-                  </button>
+                  </Link>
+                
                 </div>
               </motion.div>
             </motion.div>

@@ -1,10 +1,9 @@
-// components/who-we-serve/students-section.tsx
 "use client"
 
 import React from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { GraduationCap, Code, Users, Lightbulb, ArrowRight } from "lucide-react"
+import { GraduationCap, Code, Users, Lightbulb, ArrowRight, Link } from "lucide-react"
 import { ParallaxSection } from "@/components/parallax-section"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { FeatureItem } from "./feature-item"
@@ -25,7 +24,7 @@ export function StudentsSection() {
                 alt="Student Solutions"
                 width={400}
                 height={400}
-                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[60%] rounded-lg  z-10"
+                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[60%] rounded-lg z-10"
               />
             </div>
           </ScrollReveal>
@@ -58,8 +57,11 @@ export function StudentsSection() {
                 />
               </div>
               
-              <Button>
-                Student Programs <ArrowRight className="ml-2 h-4 w-4" />
+              {/* Button with Link - Using asChild prop */}
+              <Button asChild className="group">
+                <a href="/service/student">
+                  Student Programs <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
             </div>
           </ScrollReveal>

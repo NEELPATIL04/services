@@ -184,12 +184,7 @@ export default function EducationalServices() {
                         ))}
                       </ul>
                     </div>
-                    <div className="mt-auto p-3 bg-gray-100 dark:bg-gray-800/70 border-t border-gray-200 dark:border-gray-700">
-                      <button className="w-full py-2 px-4 bg-purple-500 hover:bg-purple-600 text-white rounded-lg transition-colors flex items-center justify-center text-sm font-medium">
-                        Learn More
-                        <ChevronRight className="h-4 w-4 ml-1" />
-                      </button>
-                    </div>
+                    
                   </motion.div>
                 ))}
               </div>
@@ -267,7 +262,7 @@ export default function EducationalServices() {
                   Ready to Elevate Your Educational Experience?
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Whether you `&lsquo;`'re an institution looking to digitize or a student working on projects, our team is here to support your educational journey.
+                  Whether you &lsquo;re an institution looking to digitize or a student working on projects, our team is here to support your educational journey.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <button className="py-2 px-5 bg-gradient-to-r from-purple-500 to-green-500 hover:from-purple-600 hover:to-green-600 text-white rounded-lg transition-all flex items-center justify-center text-sm font-medium">

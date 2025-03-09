@@ -1,8 +1,8 @@
-// components/who-we-serve/enterprise-section.tsx
 "use client"
 
 import React from "react"
 import Image from "next/image"
+import Link from "next/link" // Import Link from Next.js
 import { Button } from "@/components/ui/button"
 import { Building2, ShieldCheck, Users, BarChart3, ArrowRight } from "lucide-react"
 import { ParallaxSection } from "@/components/parallax-section"
@@ -25,7 +25,7 @@ export function EnterpriseSection() {
                                 alt="New Illustration"
                                 width={300}
                                 height={300}
-                                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[80%] rounded-lg  z-10"
+                                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[80%] rounded-lg z-10"
                             />
                         </div>
                     </ScrollReveal>
@@ -33,7 +33,7 @@ export function EnterpriseSection() {
                     <ScrollReveal direction="right" distance={50}>
                         <div>
                             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6">
-                                <Building2 className="h-8 w-8  text-red-500" />
+                                <Building2 className="h-8 w-8 text-red-500" />
                             </div>
                             <h2 className="text-3xl font-bold mb-6">Enterprise Solutions</h2>
                             <p className="text-muted-foreground mb-8">
@@ -58,9 +58,12 @@ export function EnterpriseSection() {
                                 />
                             </div>
 
-                            <Button>
-                                Enterprise Solutions <ArrowRight className="ml-2 h-4 w-4" />
-                            </Button>
+                            {/* Updated Button with Link */}
+                            <Link href="/service/enterprise">
+                                <Button>
+                                    Enterprise Solutions <ArrowRight className="ml-2 h-4 w-4" />
+                                </Button>
+                            </Link>
                         </div>
                     </ScrollReveal>
                 </div>

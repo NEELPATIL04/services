@@ -3,7 +3,8 @@
 import React from "react"
 import { Building2, UserRound, GraduationCap } from "lucide-react"
 import { ScrollReveal } from "@/components/scroll-reveal"
-import { ClientCategory } from "./client-category"
+// Import both the component and the type explicitly
+import { ClientCategory, ClientCategoryProps } from "./client-category"
 
 export function ClientCategoriesSection() {
   return (
@@ -27,9 +28,10 @@ export function ClientCategoriesSection() {
               "Digital transformation services",
               "Advanced security protocols"
             ]}
-            // Make sure this image exists in your public directory
-            image="/ent2.jpeg" 
+            image="/ent2.jpeg"
+            link="/service/enterprise"
             direction="up"
+            delay={0}
           />
           
           <ClientCategory 
@@ -42,8 +44,8 @@ export function ClientCategoriesSection() {
               "Growth-focused design",
               "Budget-friendly options"
             ]}
-            // Using placeholder image with proper URL format
-            image="/api/placeholder/800/600" 
+            image="/api/placeholder/800/600"
+            link="/service/solo-entrepreneur"
             direction="up"
             delay={0.1}
           />
@@ -58,8 +60,8 @@ export function ClientCategoriesSection() {
               "Project collaboration",
               "Portfolio development"
             ]}
-            // Using placeholder image with proper URL format
             image="/api/placeholder/800/600"
+            link="/service/student"
             direction="up"
             delay={0.2}
           />

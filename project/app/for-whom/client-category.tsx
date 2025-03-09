@@ -2,17 +2,19 @@
 
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { ScrollReveal } from "@/components/scroll-reveal"
 
-// Updated type definition to allow string while still maintaining type safety
-interface ClientCategoryProps {
+// Make sure there's only one definition of this interface
+export interface ClientCategoryProps {
   icon: React.ReactNode
   title: string
   description: string
   benefits: string[]
   image: string
+  link: string // Added link property
   direction?: "none" | "right" | "left" | "up" | "down" | string
   delay?: number
 }
@@ -23,6 +25,7 @@ export function ClientCategory({
   description, 
   benefits,
   image,
+  link,
   direction = "up",
   delay = 0
 }: ClientCategoryProps) {
@@ -39,7 +42,6 @@ export function ClientCategory({
     >
       <div className="bg-card rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
         <div className="relative h-48">
-          {/* Replaced ParallaxImage with regular Image component */}
           <Image 
             src={image}
             alt={title}
@@ -67,9 +69,11 @@ export function ClientCategory({
               </li>
             ))}
           </ul>
-          <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-            Learn More
-          </Button>
+          <Link href={link} className="block w-full">
+            <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+              Learn More
+            </Button>
+          </Link>
         </div>
       </div>
     </ScrollReveal>
