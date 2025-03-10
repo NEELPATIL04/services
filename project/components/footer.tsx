@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Code className="h-6 w-6 text-primary" />
-              <span className="font-bold text-lg">TechSolutions</span>
+              
+              <span className="font-bold text-lg">WEBDRIFT</span>
             </div>
             <p className="text-muted-foreground">
               Building the future with modern web technologies.
@@ -42,10 +42,9 @@ const Footer = () => {
           <div>
             <h3 className="font-medium text-lg mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-muted-foreground hover:text-primary">About Us</Link></li>
-              <li><Link href="/for-whom" className="text-muted-foreground hover:text-primary">For Whom</Link></li>
-              <li><Link href="/blog" className="text-muted-foreground hover:text-primary">Blog</Link></li>
-              <li><Link href="/careers" className="text-muted-foreground hover:text-primary">Careers</Link></li>
+              {/* <li><Link href="/#" className="text-muted-foreground hover:text-primary">Home</Link></li> */}
+              <li><Link href="/services" className="text-muted-foreground hover:text-primary">Services</Link></li>
+              <li><Link href="/for-whom" className="text-muted-foreground hover:text-primary">for-whom</Link></li>
               <li><Link href="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
             </ul>
           </div>
@@ -53,15 +52,15 @@ const Footer = () => {
           <div>
             <h3 className="font-medium text-lg mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li><Link href="/privacy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="text-muted-foreground hover:text-primary">Terms of Service</Link></li>
-              <li><Link href="/cookies" className="text-muted-foreground hover:text-primary">Cookie Policy</Link></li>
+              <li><Link href="/policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
+              <li><Link href="/policy" className="text-muted-foreground hover:text-primary">Terms of Service</Link></li>
+              <li><Link href="/policy" className="text-muted-foreground hover:text-primary">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t mt-12 pt-8 text-center text-muted-foreground">
-          <p>© {new Date().getFullYear()} TechSolutions. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} WEBDRIFT. All rights reserved.</p>
         </div>
       </div>
     </footer>

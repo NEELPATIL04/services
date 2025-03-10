@@ -14,7 +14,7 @@ import {
 
 export function CoreTechnologiesSection() {
   return (
-    <section className="py-24 bg-muted/50 dark:bg-[#1d1e1f] relative overflow-hidden">
+    <section className="py-24 bg-muted/50 dark:bg-[#1c1d1e] relative overflow-hidden">
       <ParallaxSection speed={0.15} direction="right" className="absolute -left-64 top-20 opacity-5 z-0">
         <Code className="h-[800px] w-[800px] text-primary" />
       </ParallaxSection>

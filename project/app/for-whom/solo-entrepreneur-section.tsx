@@ -2,26 +2,27 @@
 "use client"
 
 import React from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { UserRound, Lightbulb, Clock, PenTool, HeartHandshake, ArrowRight } from "lucide-react"
 import { ParallaxSection } from "@/components/parallax-section"
 import { ScrollReveal } from "@/components/scroll-reveal"
-import { ParallaxImage } from "@/components/parallax-image"
 import { FeatureItem } from "./feature-item"
+import Link from "next/link"
 
 export function SoloEntrepreneurSection() {
   return (
-    <section className="py-24 bg-muted/50 relative overflow-hidden">
+    <section className="py-24 bg-muted/50 relative overflow-hidden ">
       <ParallaxSection speed={0.15} direction="left" className="absolute -left-64 top-20 opacity-5 z-0">
         <Lightbulb className="h-[800px] w-[800px] text-primary" />
       </ParallaxSection>
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 sm:ml-5">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <ScrollReveal direction="left" distance={50} className="order-2 lg:order-1">
-            <div>
+          <ScrollReveal direction="left" distance={50}>
+            <div className="pr-12">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6">
-                <UserRound className="h-8 w-8" />
+                <UserRound className="h-8 w-8 text-orange-400" />
               </div>
               <h2 className="text-3xl font-bold mb-6">Solo Entrepreneur Solutions</h2>
               <p className="text-muted-foreground mb-8">
@@ -30,7 +31,7 @@ export function SoloEntrepreneurSection() {
               
               <div className="space-y-6 mb-8">
                 <FeatureItem 
-                  icon={<Clock className="h-5 w-5" />}
+                  icon={<Clock className="h-5 w-5 " />}
                   title="Rapid MVP Development"
                   description="Get your minimum viable product to market quickly with our streamlined development process focused on core functionality."
                 />
@@ -45,20 +46,22 @@ export function SoloEntrepreneurSection() {
                   description="Technical partnership that provides not just implementation but strategic guidance as your business evolves."
                 />
               </div>
-              
+              <Link href="/service/solo-entrepreneur">
               <Button>
                 Entrepreneur Solutions <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
+              </Link>
             </div>
           </ScrollReveal>
           
-          <ScrollReveal direction="right" distance={50} className="order-1 lg:order-2">
-            <div className="relative h-[500px] rounded-lg overflow-hidden">
-              <ParallaxImage 
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                alt="Solo Entrepreneur Solutions"
-                speed={0.1}
-                className="rounded-lg"
+          <ScrollReveal direction="right" distance={50}>
+            <div className="relative h-[400px] rounded-lg overflow-hidden hidden lg:block">
+              <Image
+                src="/image-2.png"
+                alt="Solo Entrepreneur Illustration"
+                width={600}
+                height={600}
+                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[80%] rounded-lg z-10"
               />
             </div>
           </ScrollReveal>

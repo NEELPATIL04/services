@@ -1,20 +1,21 @@
-// components/who-we-serve/client-category.tsx
 "use client"
 
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import { ParallaxImage } from "@/components/parallax-image"
 import { ScrollReveal } from "@/components/scroll-reveal"
 
-interface ClientCategoryProps {
+// Make sure there's only one definition of this interface
+export interface ClientCategoryProps {
   icon: React.ReactNode
   title: string
   description: string
   benefits: string[]
   image: string
-  direction?: string
+  link: string // Added link property
+  direction?: "none" | "right" | "left" | "up" | "down" | string
   delay?: number
 }
 
@@ -24,17 +25,30 @@ export function ClientCategory({
   description, 
   benefits,
   image,
+  link,
   direction = "up",
   delay = 0
 }: ClientCategoryProps) {
   return (
-    <ScrollReveal direction={direction} delay={delay} distance={30}>
+    <ScrollReveal 
+      direction={
+        // Type assertion to handle potential string values
+        ["none", "right", "left", "up", "down"].includes(direction as string) 
+          ? direction as "none" | "right" | "left" | "up" | "down" 
+          : "up"
+      } 
+      delay={delay} 
+      distance={30}
+    >
       <div className="bg-card rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
         <div className="relative h-48">
-          <ParallaxImage 
+          <Image 
             src={image}
             alt={title}
-            speed={0.1}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+            priority
           />
         </div>
         <div className="p-6">
@@ -55,9 +69,11 @@ export function ClientCategory({
               </li>
             ))}
           </ul>
-          <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-            Learn More
-          </Button>
+          <Link href={link} className="block w-full">
+            <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+              Learn More
+            </Button>
+          </Link>
         </div>
       </div>
     </ScrollReveal>

@@ -5,7 +5,7 @@ import TechStackSection from "./TechStackSection"
 import ClientsSection from "./ClientsSection"
 import FeaturedProjectSection from "./FeatureProjectsection"
 import CTASection from "./CTASection"
-
+import PortfolioSection from "./Featuresproject2"
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -31,6 +31,7 @@ export default function Home() {
       <TechStackSection />
       <ClientsSection />
       <FeaturedProjectSection />
+      <PortfolioSection/>
       <CTASection />
     </div>
   )

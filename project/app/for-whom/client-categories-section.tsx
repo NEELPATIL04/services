@@ -1,14 +1,14 @@
-// components/who-we-serve/client-categories-section.tsx
 "use client"
 
 import React from "react"
 import { Building2, UserRound, GraduationCap } from "lucide-react"
 import { ScrollReveal } from "@/components/scroll-reveal"
-import { ClientCategory } from "./client-category"
+// Import both the component and the type explicitly
+import { ClientCategory, ClientCategoryProps } from "./client-category"
 
 export function ClientCategoriesSection() {
   return (
-    <section className="py-24 bg-muted/50">
+    <section className="py-24 bg-white dark:bg-[#1c1d1e]">
       <div className="container mx-auto px-4">
         <ScrollReveal className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Our Clients</h2>
@@ -19,7 +19,7 @@ export function ClientCategoriesSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <ClientCategory 
-            icon={<Building2 className="h-10 w-10" />}
+            icon={<Building2 className="h-10 w-10 text-red-500" />}
             title="Enterprise"
             description="Comprehensive solutions for established businesses looking to innovate and scale their digital presence"
             benefits={[
@@ -28,12 +28,14 @@ export function ClientCategoriesSection() {
               "Digital transformation services",
               "Advanced security protocols"
             ]}
-            image="https://images.unsplash.com/photo-1560179707-f14e90ef3623?ixlib=rb-4.0.3&auto=format&fit=crop&w=1478&q=80"
+            image="/ent2.jpeg"
+            link="/service/enterprise"
             direction="up"
+            delay={0}
           />
           
           <ClientCategory 
-            icon={<UserRound className="h-10 w-10" />}
+            icon={<UserRound className="h-10 w-10 text-orange-400" />}
             title="Solo Entrepreneurs"
             description="Agile and affordable solutions to help solopreneurs bring their ideas to market quickly"
             benefits={[
@@ -42,13 +44,14 @@ export function ClientCategoriesSection() {
               "Growth-focused design",
               "Budget-friendly options"
             ]}
-            image="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+            image="/api/placeholder/800/600"
+            link="/service/solo-entrepreneur"
             direction="up"
             delay={0.1}
           />
           
           <ClientCategory 
-            icon={<GraduationCap className="h-10 w-10" />}
+            icon={<GraduationCap className="h-10 w-10 text-pink-600" />}
             title="College Students"
             description="Educational resources and project support for students building their tech portfolio"
             benefits={[
@@ -57,7 +60,8 @@ export function ClientCategoriesSection() {
               "Project collaboration",
               "Portfolio development"
             ]}
-            image="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+            image="/api/placeholder/800/600"
+            link="/service/student"
             direction="up"
             delay={0.2}
           />

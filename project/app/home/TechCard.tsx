@@ -1,7 +1,13 @@
-// components/cards/TechCard.jsx
+import React, { ElementType } from 'react';
 import { Card, CardContent } from "@/components/ui/card"
 
-export function TechCard({ name, description, icon: Icon }) {
+interface TechCardProps {
+  icon?: ElementType;
+  name: string;
+  description: string;
+}
+
+export function TechCard({ name, description, icon: Icon }: TechCardProps) {
   return (
     <Card className="overflow-hidden border bg-card hover:shadow-lg transition-all duration-300 h-full dark:bg-card/80 dark:backdrop-blur-sm dark:border-muted">
       <CardContent className="p-5 flex flex-col items-center text-center">

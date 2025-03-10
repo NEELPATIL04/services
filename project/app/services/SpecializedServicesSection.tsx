@@ -1,4 +1,3 @@
-// src/components/services/SpecializedServicesSection.jsx
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { ServiceCard } from "./ServiceCard";
 import { 
@@ -12,7 +11,17 @@ import {
 
 export function SpecializedServicesSection() {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden bg-white dark:bg-[#1c1d1e]">
+        <div className="absolute inset-0 w-full h-full">
+        <div 
+          className="absolute w-[200%] h-[200px] bg-gradient-to-r from-transparent via-blue-100/30 to-transparent dark:via-white/20 blur-[100px] transition-colors duration-300"
+          style={{ 
+            top: '25%', 
+            left: '-90%',
+            transform: 'rotate(180deg)'
+          }}
+        />
+      </div>
       <div className="container mx-auto px-4">
         <ScrollReveal className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Specialized Services</h2>
@@ -21,7 +30,7 @@ export function SpecializedServicesSection() {
           </p>
         </ScrollReveal>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           <ScrollReveal delay={0.1} direction="left" distance={30}>
             <ServiceCard 
               icon={<ShoppingBag className="h-10 w-10 text-purple-500" />}

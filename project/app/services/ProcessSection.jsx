@@ -6,7 +6,7 @@ import { Code } from "lucide-react"
 
 export function ProcessSection() {
   return (
-    <section className="py-24 dark:bg-[#1d1e1f] relative overflow-hidden">
+    <section className="py-24 dark:bg-[#1c1d1e] relative overflow-hidden">
       <ParallaxSection speed={0.2} direction="right" className="absolute -left-64 top-0 opacity-10 z-0">
         <Code className="h-[600px] w-[600px] text-primary" />
       </ParallaxSection>
