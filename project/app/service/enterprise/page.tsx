@@ -105,9 +105,9 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="flex items-center mb-6"
         >
-          <Link href="/" className="flex items-center mr-3 bg-white dark:bg-[#292a2b] px-3 py-2 rounded-lg shadow-sm hover:shadow-md text-blue-600 dark:text-blue-400 transition-all duration-300">
+          <Link href="/service" className="flex items-center mr-3 bg-white dark:bg-[#292a2b] px-3 py-2 rounded-lg shadow-sm hover:shadow-md text-blue-600 dark:text-blue-400 transition-all duration-300">
             <ArrowLeft className="h-5 w-5 mr-1" />
-            Back to Home
+            Back to Service 
           </Link>
           <span className="text-gray-500 dark:text-gray-400 transition-colors duration-300">|</span>
           <span className="ml-3 text-gray-600 dark:text-gray-400 transition-colors duration-300 flex items-center">

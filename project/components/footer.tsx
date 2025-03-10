@@ -16,7 +16,7 @@ const Footer = () => {
               Building the future with modern web technologies.
             </p>
             <div className="flex space-x-4">
-              <Link href="https://twitter.com" className="text-muted-foreground hover:text-primary">
+              {/* <Link href="https://twitter.com" className="text-muted-foreground hover:text-primary">
                 <Twitter className="h-5 w-5" />
               </Link>
               <Link href="https://github.com" className="text-muted-foreground hover:text-primary">
@@ -24,7 +24,7 @@ const Footer = () => {
               </Link>
               <Link href="https://linkedin.com" className="text-muted-foreground hover:text-primary">
                 <Linkedin className="h-5 w-5" />
-              </Link>
+              </Link> */}
             </div>
           </div>
 

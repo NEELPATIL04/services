@@ -27,13 +27,13 @@ export const ContactDetailsSection = () => (
               <ContactInfo 
                 icon={<Phone className="h-5 w-5 text-red-400" />}
                 title="Phone"
-                content="+1 (555) 123-4567"
+                content="+91 7821954352"
                 href="tel:+15551234567"
               />
               <ContactInfo 
                 icon={<MapPin className="h-5 w-5 text-yellow-400" />}
                 title="Office"
-                content="123 Tech Street, San Francisco, CA 94107"
+                content="Bavdhan,Pune,India"
                 href="https://maps.google.com"
               />
             </div>

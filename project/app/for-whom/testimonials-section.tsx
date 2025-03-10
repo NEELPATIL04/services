@@ -20,9 +20,9 @@ export function TestimonialsSection() {
           <ScrollReveal direction="up" distance={30} delay={0.1}>
             <Testimonial 
               quote="The enterprise solution they delivered has transformed our internal processes and significantly improved our customer experience."
-              name="Sarah Johnson"
-              title="CTO, Global Enterprises Inc."
-              image="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1476&q=80"
+              name="Priti Sharma"
+              title="Student"
+             image="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1476&q=80"
               type="enterprise"
             />
           </ScrollReveal>
@@ -30,8 +30,8 @@ export function TestimonialsSection() {
           <ScrollReveal direction="up" distance={30} delay={0.2}>
             <Testimonial 
               quote="As a solo founder, I needed a technical partner who understood my vision and budget constraints. They delivered beyond my expectations."
-              name="Michael Chen"
-              title="Founder, InnovateTech"
+              name="Yash Tiwari"
+              title="Founder"
               image="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
               type="entrepreneur"
             />
@@ -40,8 +40,8 @@ export function TestimonialsSection() {
           <ScrollReveal direction="up" distance={30} delay={0.3}>
             <Testimonial 
               quote="The mentorship and technical guidance I received helped me complete my senior project and land my first developer job."
-              name="Emily Rodriguez"
-              title="Computer Science Student, Tech University"
+              name="Soham Pawar"
+              title="Computer Science Student"
               image="https://images.unsplash.com/photo-1596935884413-260a972dab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
               type="student"
             />
