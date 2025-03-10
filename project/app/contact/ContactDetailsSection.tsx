@@ -1,10 +1,17 @@
-// src/components/contact/ContactDetailsSection.tsx
-import { ParallaxSection } from "@/components/parallax-section"
-import { ParallaxImage } from "@/components/parallax-image"
-import { ScrollReveal } from "@/components/scroll-reveal"
-import { ContactInfo } from "./ContactInfo"
-import { ContactForm } from "./ContactForm"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { ParallaxSection } from "@/components/parallax-section";
+import { ParallaxImage } from "@/components/parallax-image";
+import { ScrollReveal } from "@/components/scroll-reveal";
+import { ContactInfo } from "./ContactInfo";
+import { ContactForm } from "./ContactForm";
+import { Mail, Phone, MapPin } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Tech Solutions | Web & App Development | Pune, India",
+  description: `📞 Contact Tech Solutions – Expert IT Services, Web & App Development | Pune, India  
+  Get in touch with **Tech Solutions** for top-tier **IT services, web & mobile app development, digital transformation, and business consultation**.  
+  Reach us via **email, phone, or visit our Pune office**. Let’s build your next big project!`
+};
 
 export const ContactDetailsSection = () => (
   <section className="py-24 bg-muted/50">
@@ -28,12 +35,12 @@ export const ContactDetailsSection = () => (
                 icon={<Phone className="h-5 w-5 text-red-400" />}
                 title="Phone"
                 content="+91 7821954352"
-                href="tel:+15551234567"
+                href="tel:+917821954352"
               />
               <ContactInfo 
                 icon={<MapPin className="h-5 w-5 text-yellow-400" />}
                 title="Office"
-                content="Bavdhan,Pune,India"
+                content="Bavdhan, Pune, India"
                 href="https://maps.google.com"
               />
             </div>
@@ -60,4 +67,4 @@ export const ContactDetailsSection = () => (
       </div>
     </div>
   </section>
-)
+);

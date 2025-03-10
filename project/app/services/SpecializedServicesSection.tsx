@@ -78,7 +78,7 @@ export function SpecializedServicesSection() {
         </div>
         
         <ScrollReveal className="flex justify-center">
-          <Link href="/services" className="inline-flex items-center gap-2 bg-black dark:bg-white  text-white  dark:text-black font-medium py-3 px-6 rounded-lg transition-colors duration-200">
+          <Link href="/service" className="inline-flex items-center gap-2 bg-black dark:bg-white  text-white  dark:text-black font-medium py-3 px-6 rounded-lg transition-colors duration-200">
             View All Services
             <ArrowRight className="h-5 w-5" />
           </Link>

@@ -20,7 +20,7 @@ export default function HeroSection() {
         
         <div className="flex justify-center">
           <Button size="lg" asChild className="rounded-full px-8 bg-blue-600 hover:bg-blue-700 dark:bg-white text-white dark:text-black transition-colors duration-300">
-            <Link href="/get-started">Get started</Link>
+            <Link href="/contact">Get started</Link>
           </Button>
         </div>
       </ParallaxSection>
@@ -31,7 +31,7 @@ export default function HeroSection() {
         <div className="w-full md:w-5/12 lg:w-3/12 rounded-lg h-auto md:h-40 border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-[#222324] overflow-hidden transition-colors duration-300">
           <div className="px-4 py-2 flex items-center gap-2 bg-gray-100 dark:bg-[#222324] transition-colors duration-300">
             <div className="w-5 h-5 rounded bg-gray-400 dark:bg-[#222324] transition-colors duration-300"></div>
-            <span className="text-gray-600 dark:text-gray-400 text-xs transition-colors duration-300">You shared the snippet with Tsavo</span>
+            <span className="text-gray-600 dark:text-gray-400 text-xs transition-colors duration-300">You shared the snippet with Webdrift</span>
           </div>
           <div className="p-4 text-sm font-mono">
             <div className="whitespace-pre-wrap md:whitespace-normal">

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ParallaxSection } from "@/components/parallax-section";
 
+
 export default function ServicesPage() {
   return (
     <div className="relative min-h-screen flex flex-col items-start pt-20 justify-start overflow-hidden bg-gray-100 dark:bg-[#1c1d1e] transition-colors duration-300">
