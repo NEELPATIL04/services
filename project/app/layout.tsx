@@ -8,8 +8,25 @@ import Footer from '@/components/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'TechSolutions - Modern Web Development',
-  description: 'Professional web development services using the latest technologies',
+  title: 'Webdrift - AI-Powered Web & App Development',
+  description: 
+    "Boost your business with AI-driven web & mobile apps. Webdrift offers cutting-edge digital solutions for students, enterprises, and entrepreneurs. Automate, scale, and grow with innovation!",
+  keywords: [
+    "Web development", "App development", "AI solutions", "Business automation",
+    "Enterprise scaling", "Entrepreneurs", "Digital transformation",
+    "Career growth", "AI-powered apps", "Next.js", "React", "Best web solutions"
+  ].join(", "),
+  openGraph: {
+    title: 'Webdrift - AI-Powered Web & App Development',
+    description: 
+      "Boost your business with AI-driven web & mobile apps. Webdrift offers cutting-edge digital solutions for students, enterprises, and entrepreneurs. Automate, scale, and grow with innovation!",
+    url: 'https://yourwebsite.com',
+    type: 'website',
+    siteName: 'Webdrift',
+   
+    
+  }
+
 };
 
 export default function RootLayout({
@@ -19,6 +36,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://yourwebsite.com" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"

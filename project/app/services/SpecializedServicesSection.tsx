@@ -6,13 +6,15 @@ import {
   Smartphone, 
   Zap, 
   BarChart, 
-  Code 
+  Code,
+  ArrowRight 
 } from "lucide-react";
+import Link from "next/link";
 
 export function SpecializedServicesSection() {
   return (
     <section className="py-24 relative overflow-hidden bg-white dark:bg-[#1c1d1e]">
-        <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-full">
         <div 
           className="absolute w-[200%] h-[200px] bg-gradient-to-r from-transparent via-blue-100/30 to-transparent dark:via-white/20 blur-[100px] transition-colors duration-300"
           style={{ 
@@ -30,7 +32,7 @@ export function SpecializedServicesSection() {
           </p>
         </ScrollReveal>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <ScrollReveal delay={0.1} direction="left" distance={30}>
             <ServiceCard 
               icon={<ShoppingBag className="h-10 w-10 text-purple-500" />}
@@ -74,6 +76,13 @@ export function SpecializedServicesSection() {
             />
           </ScrollReveal>
         </div>
+        
+        <ScrollReveal className="flex justify-center">
+          <Link href="/service" className="inline-flex items-center gap-2 bg-black dark:bg-white  text-white  dark:text-black font-medium py-3 px-6 rounded-lg transition-colors duration-200">
+            View All Services
+            <ArrowRight className="h-5 w-5" />
+          </Link>
+        </ScrollReveal>
       </div>
     </section>
   );

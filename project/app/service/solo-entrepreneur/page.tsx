@@ -154,9 +154,9 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="flex items-center mb-6"
         >
-          <Link href="/" className="flex items-center mr-3 bg-white dark:bg-[#292a2b] px-3 py-2 rounded-lg shadow-sm hover:shadow-md text-blue-600 dark:text-blue-400 transition-all duration-300">
+          <Link href="/service" className="flex items-center mr-3 bg-white dark:bg-[#292a2b] px-3 py-2 rounded-lg shadow-sm hover:shadow-md text-blue-600 dark:text-blue-400 transition-all duration-300">
             <ArrowLeft className="h-5 w-5 mr-1" />
-            Back to Home
+            Back to Service
           </Link>
           <span className="text-gray-500 dark:text-gray-400 transition-colors duration-300">|</span>
           <span className="ml-3 text-gray-600 dark:text-gray-400 transition-colors duration-300 flex items-center">
@@ -232,12 +232,11 @@ export default function Services() {
                   We offer flexible, affordable solutions tailored specifically for solo entrepreneurs and small businesses looking to make a big impact.
                 </p>
                 <div className="flex flex-wrap gap-3">
+                  <Link href="/contact">
                   <button className="py-2 px-5 bg-purple-500 hover:bg-purple-600 text-white rounded-lg transition-colors flex items-center justify-center text-sm font-medium">
                     Get a Free Consultation
                   </button>
-                  <button className="py-2 px-5 bg-white dark:bg-gray-700 text-purple-600 dark:text-purple-400 border border-purple-200 dark:border-gray-600 rounded-lg transition-colors flex items-center justify-center text-sm font-medium hover:bg-purple-50 dark:hover:bg-gray-600">
-                    View Solo Success Stories
-                  </button>
+                  </Link>
                 </div>
               </motion.div>
             </motion.div>

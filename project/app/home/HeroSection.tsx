@@ -20,7 +20,7 @@ export default function HeroSection() {
         
         <div className="flex justify-center">
           <Button size="lg" asChild className="rounded-full px-8 bg-blue-600 hover:bg-blue-700 dark:bg-white text-white dark:text-black transition-colors duration-300">
-            <Link href="/get-started">Get started</Link>
+            <Link href="/contact">Get started</Link>
           </Button>
         </div>
       </ParallaxSection>
@@ -28,13 +28,13 @@ export default function HeroSection() {
       {/* Code snippets */}
       <div className="absolute bottom-0 w-full flex flex-col md:flex-row justify-center md:justify-between px-4 md:px-8 lg:px-20 pb-4 md:pb-8 opacity-70 gap-4">
         {/* Code snippet 1 */}
-        <div className="w-full md:w-5/12 lg:w-3/12 rounded-lg h-40 border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-[#222324] overflow-hidden transition-colors duration-300">
+        <div className="w-full md:w-5/12 lg:w-3/12 rounded-lg h-auto md:h-40 border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-[#222324] overflow-hidden transition-colors duration-300">
           <div className="px-4 py-2 flex items-center gap-2 bg-gray-100 dark:bg-[#222324] transition-colors duration-300">
             <div className="w-5 h-5 rounded bg-gray-400 dark:bg-[#222324] transition-colors duration-300"></div>
-            <span className="text-gray-600 dark:text-gray-400 text-xs transition-colors duration-300">You shared the snippet with Tsavo</span>
+            <span className="text-gray-600 dark:text-gray-400 text-xs transition-colors duration-300">You shared the snippet with Webdrift</span>
           </div>
           <div className="p-4 text-sm font-mono">
-            <div>
+            <div className="whitespace-pre-wrap md:whitespace-normal">
               <span className="text-gray-500 dark:text-gray-400 transition-colors duration-300">1</span> 
               <span className="text-pink-600 dark:text-pink-400 transition-colors duration-300">const</span> 
               <span className="text-blue-600 dark:text-blue-400 transition-colors duration-300">stage</span> 
@@ -43,7 +43,7 @@ export default function HeroSection() {
               <span className="text-blue-600 dark:text-blue-400 transition-colors duration-300">querySelector</span>
               (<span className="text-green-600 dark:text-green-400 transition-colors duration-300">&apos;svg&apos;</span>)
             </div>
-            <div>
+            <div className="whitespace-pre-wrap md:whitespace-normal">
               <span className="text-gray-500 dark:text-gray-400 transition-colors duration-300">2</span> 
               <span className="text-pink-600 dark:text-pink-400 transition-colors duration-300">const</span> 
               <span className="text-blue-600 dark:text-blue-400 transition-colors duration-300">hit</span> 
@@ -52,7 +52,7 @@ export default function HeroSection() {
               <span className="text-blue-600 dark:text-blue-400 transition-colors duration-300">querySelector</span>
               (<span className="text-green-600 dark:text-green-400 transition-colors duration-300">&apos;di&apos;</span>)
             </div>
-            <div>
+            <div className="whitespace-pre-wrap md:whitespace-normal">
               <span className="text-gray-500 dark:text-gray-400 transition-colors duration-300">3</span> 
               <span className="text-pink-600 dark:text-pink-400 transition-colors duration-300">let</span> 
               <span className="text-blue-600 dark:text-blue-400 transition-colors duration-300">mPos</span> 
@@ -78,4 +78,4 @@ export default function HeroSection() {
       </div>
     </div>
   );
-}
+} 

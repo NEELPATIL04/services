@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ParallaxSection } from "@/components/parallax-section";
-import { BookOpen, Clock, Globe, Smartphone, Server, Lightbulb, Code, Share2, GraduationCap, School, ArrowLeft, ChevronRight } from "lucide-react";
+import { BookOpen, Clock, Globe, Smartphone, Users, Lightbulb, Code, Share2, GraduationCap, School, ArrowLeft, ChevronRight } from "lucide-react";
 
 export default function EducationalServices() {
   const fadeIn = {
@@ -105,6 +105,30 @@ export default function EducationalServices() {
         "Performance optimization",
         "Monitoring implementation"
       ]
+    },
+    {
+      title: "Project Ideas Discussion",
+      description: "Collaborative sessions to explore and refine innovative project concepts with industry experts.",
+      icon: <Lightbulb className="h-6 w-6 text-green-500" />,
+      features: [
+        "Brainstorming workshops",
+        "Feasibility analysis",
+        "Market demand assessment",
+        "Technology stack recommendations"
+      ]
+    },
+    
+    
+    {
+      title: "Mentorship Assessment",
+      description: "Comprehensive evaluation and guidance to help students and professionals reach their development goals.",
+      icon: <Users className="h-6 w-6 text-green-500" />,
+      features: [
+        "Skill gap analysis",
+        "Personalized learning paths",
+        "Progress tracking",
+        "Career development roadmaps"
+      ]
     }
   ];
 
@@ -119,9 +143,9 @@ export default function EducationalServices() {
           transition={{ duration: 0.6 }}
           className="flex items-center mb-6"
         >
-          <Link href="/" className="flex items-center mr-3 bg-white dark:bg-[#292a2b] px-3 py-2 rounded-lg shadow-sm hover:shadow-md text-purple-600 dark:text-purple-400 transition-all duration-300">
+          <Link href="/service" className="flex items-center mr-3 bg-white dark:bg-[#292a2b] px-3 py-2 rounded-lg shadow-sm hover:shadow-md text-purple-600 dark:text-purple-400 transition-all duration-300">
             <ArrowLeft className="h-5 w-5 mr-1" />
-            Back to Home
+            Back to service
           </Link>
           <span className="text-gray-500 dark:text-gray-400 transition-colors duration-300">|</span>
           <span className="ml-3 text-gray-600 dark:text-gray-400 transition-colors duration-300 flex items-center">
@@ -246,12 +270,7 @@ export default function EducationalServices() {
                         ))}
                       </ul>
                     </div>
-                    <div className="mt-auto p-3 bg-gray-100 dark:bg-gray-800/70 border-t border-gray-200 dark:border-gray-700">
-                      <button className="w-full py-2 px-4 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors flex items-center justify-center text-sm font-medium">
-                        Explore Options
-                        <ChevronRight className="h-4 w-4 ml-1" />
-                      </button>
-                    </div>
+                    
                   </motion.div>
                 ))}
               </div>
@@ -265,12 +284,11 @@ export default function EducationalServices() {
                   Whether you &lsquo;re an institution looking to digitize or a student working on projects, our team is here to support your educational journey.
                 </p>
                 <div className="flex flex-wrap gap-3">
+                  <Link href="/contact">
                   <button className="py-2 px-5 bg-gradient-to-r from-purple-500 to-green-500 hover:from-purple-600 hover:to-green-600 text-white rounded-lg transition-all flex items-center justify-center text-sm font-medium">
                     Schedule a Demo
                   </button>
-                  <button className="py-2 px-5 bg-white dark:bg-gray-700 text-purple-600 dark:text-purple-400 border border-purple-200 dark:border-gray-600 rounded-lg transition-colors flex items-center justify-center text-sm font-medium hover:bg-purple-50 dark:hover:bg-gray-600">
-                    View Success Stories
-                  </button>
+                  </Link>
                 </div>
               </motion.div>
             </motion.div>

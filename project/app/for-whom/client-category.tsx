@@ -41,16 +41,7 @@ export function ClientCategory({
       distance={30}
     >
       <div className="bg-card rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
-        <div className="relative h-48">
-          <Image 
-            src={image}
-            alt={title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
-            priority
-          />
-        </div>
+        
         <div className="p-6">
           <div className="flex items-center mb-4">
             <div className="p-2 bg-primary/10 rounded-full text-primary mr-3">

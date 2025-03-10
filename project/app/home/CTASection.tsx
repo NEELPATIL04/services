@@ -12,33 +12,33 @@ interface TestimonialCard {
 const cards: TestimonialCard[] = [
   {
     id: 1,
-    title: "Henry Rausch",
-    subtitle: "Quality Engineer @ FIC America Corp",
-    content: "You need to try pieces out if you write code and feel that you need a true second brain, where you can basically store any function or code you've ever written and can use it again and again and again."
+    title: "Arjun Sharma",
+    subtitle: "Engineering Student @ IIT Delhi",
+    content: "The project delivered for my final year thesis was exceptional. The code was well-structured and documented, making it easy for me to understand and present. Perfect for students looking to build impressive academic portfolios."
   },
   {
     id: 2,
-    title: "Scott Hanselman",
-    subtitle: "VP of Developer Community @ Microsoft",
-    content: "Everyone's got a copilot. You're inverted, you've rotated the whole thing. It's not a vertical copilot, it's a horizontal one."
+    title: "Priya Patel",
+    subtitle: "Solo Entrepreneur @ DesignHub",
+    content: "As a solo entrepreneur, finding affordable yet professional web services was challenging until I discovered this team. Their custom e-commerce solution helped me launch my business with minimal investment and maximum impact."
   },
   {
     id: 3,
-    title: "Ayush Kumar",
-    subtitle: "Data Analyst @ Accenture",
-    content: "Pieces Copilot has become much more efficient for any developer to ask any question and get a particular result. The LLMs in Pieces are sensitive to programming, so I think that gives better results."
+    title: "Vikram Malhotra",
+    subtitle: "CTO @ TechInnovate Solutions",
+    content: "Our enterprise needed scalable software that could handle our growing data demands. The team delivered a comprehensive solution that optimized our workflow and increased efficiency by 35% within the first quarter."
   },
   {
     id: 4,
-    title: "Maya Johnson",
-    subtitle: "Senior Developer @ TechCorp",
-    content: "The ability to quickly search and reuse code snippets has saved me countless hours. It's like having your entire coding history at your fingertips."
+    title: "Neha Verma",
+    subtitle: "Computer Science Student @ BITS Pilani",
+    content: "The machine learning project they developed for my research work was outstanding. The algorithms were optimized for performance and the documentation made it easy to explain to non-technical faculty members."
   },
   {
     id: 5,
-    title: "Alex Rivera",
-    subtitle: "Full Stack Engineer @ StartupInc",
-    content: "I've increased my productivity by 40% since I started using this tool. The contextual suggestions are spot on, and it learns from my coding patterns."
+    title: "Rajesh Gupta",
+    subtitle: "Founder @ DigitalGrowth",
+    content: "Their web development services transformed my business idea into reality. The responsive design, SEO optimization, and user-friendly interface helped me attract 200+ clients within the first three months of launch."
   }
 ];
 
