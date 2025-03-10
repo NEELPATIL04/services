@@ -195,7 +195,7 @@ export default function CookiePolicy() {
                 <div className="mt-4 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg inline-block">
                   <p className="flex items-center text-blue-600 dark:text-blue-400 font-medium m-0">
                     <Mail className="h-5 w-5 mr-2" />
-                    cookies@webdrift.com
+                    webdrift07@gmail.com
                   </p>
                 </div>
               </motion.div>
