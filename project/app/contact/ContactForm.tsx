@@ -1,9 +1,10 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { Button } from "@/components/ui/button"
+import { useState, useRef } from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -11,15 +12,27 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Send, CheckCircle2, User, Mail, Phone, Tag, MessageCircle } from "lucide-react"
-import { formSchema, ContactFormData } from "./contactFormSchema"
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Send,
+  CheckCircle2,
+  User,
+  Mail,
+  Phone,
+  Tag,
+  MessageCircle,
+  AlertCircle,
+} from "lucide-react";
+import { formSchema, ContactFormData } from "./contactFormSchema";
 
 export const ContactForm = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+
   const form = useForm<ContactFormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -29,12 +42,44 @@ export const ContactForm = () => {
       subject: "",
       message: "",
     },
-  })
+  });
 
-  function onSubmit(values: ContactFormData) {
-    console.log(values)
-    setIsSubmitted(true)
-    form.reset()
+  async function onSubmit(values: ContactFormData) {
+    try {
+      setIsLoading(true);
+      setError(null);
+
+      // Replace these with your actual EmailJS credentials
+      const serviceID = "service_bntm8q8";
+      const templateID = "template_s4esmu7";
+      const publicKey = "kmz4ynjICDdFVdI_-";
+
+      // Prepare template parameters
+      const templateParams = {
+        name: values.name,
+        email: values.email,
+        phone: values.phone || "Not provided",
+        subject: values.subject,
+        message: values.message,
+      };
+
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        serviceID,
+        templateID,
+        templateParams,
+        publicKey
+      );
+
+      console.log("Email sent successfully:", result.text);
+      setIsSubmitted(true);
+      form.reset();
+    } catch (err) {
+      console.error("Failed to send email:", err);
+      setError("Failed to send your message. Please try again later.");
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   if (isSubmitted) {
@@ -51,12 +96,23 @@ export const ContactForm = () => {
           Send Another Message
         </Button>
       </div>
-    )
+    );
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form
+        ref={formRef}
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-6"
+      >
+        {error && (
+          <div className="p-4 mb-4 border border-red-200 bg-red-50 text-red-600 rounded-md flex items-center">
+            <AlertCircle className="h-5 w-5 mr-2" />
+            <p>{error}</p>
+          </div>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <FormField
             control={form.control}
@@ -89,7 +145,7 @@ export const ContactForm = () => {
             )}
           />
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <FormField
             control={form.control}
@@ -97,7 +153,8 @@ export const ContactForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>
-                  <Phone className="inline-block mr-2 text-purple-500" /> Phone (Optional)
+                  <Phone className="inline-block mr-2 text-purple-500" /> Phone
+                  (Optional)
                 </FormLabel>
                 <FormControl>
                   <Input placeholder="Your phone number" {...field} />
@@ -122,31 +179,38 @@ export const ContactForm = () => {
             )}
           />
         </div>
-        
+
         <FormField
           control={form.control}
           name="message"
           render={({ field }) => (
             <FormItem>
               <FormLabel>
-                <MessageCircle className="inline-block mr-2 text-orange-500" /> Message
+                <MessageCircle className="inline-block mr-2 text-orange-500" />{" "}
+                Message
               </FormLabel>
               <FormControl>
-                <Textarea 
-                  placeholder="Tell us about your project or inquiry" 
+                <Textarea
+                  placeholder="Tell us about your project or inquiry"
                   className="min-h-[150px]"
-                  {...field} 
+                  {...field}
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        
-        <Button type="submit" className="w-full">
-          <Send className="mr-2 h-4 w-4 text-white" /> Send Message
+
+        <Button type="submit" className="w-full" disabled={isLoading}>
+          {isLoading ? (
+            <>Processing...</>
+          ) : (
+            <>
+              <Send className="mr-2 h-4 w-4 text-white" /> Send Message
+            </>
+          )}
         </Button>
       </form>
     </Form>
-  )
-}
+  );
+};
