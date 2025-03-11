@@ -110,7 +110,7 @@ export const ContactForm = () => {
           <div className="p-4 mb-4 border border-red-200 bg-red-50 text-red-600 rounded-md flex items-center">
             <AlertCircle className="h-5 w-5 mr-2" />
             <p>{error}</p>
-          </div>
+          </div> 
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
