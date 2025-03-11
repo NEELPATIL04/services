@@ -12,7 +12,7 @@ export function TestimonialsSection() {
         <ScrollReveal className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">What Our Clients Say</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Hear from the diverse range of clients we've helped achieve their digital goals
+            Hear from the diverse range of clients we&apos;ve helped achieve their digital goals
           </p>
         </ScrollReveal>
         

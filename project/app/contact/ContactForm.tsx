@@ -90,7 +90,7 @@ export const ContactForm = () => {
         </div>
         <h3 className="text-2xl font-bold mb-4">Message Sent!</h3>
         <p className="text-muted-foreground mb-6">
-          Thank you for reaching out. We'll get back to you as soon as possible.
+          Thank you for reaching out. We&apos;ll get back to you as soon as possible.
         </p>
         <Button onClick={() => setIsSubmitted(false)}>
           Send Another Message
