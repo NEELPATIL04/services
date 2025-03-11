@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-// import { ParallaxSection } from "@/components/parallax-section";
+import { ParallaxSection } from "@/components/parallax-section";
 import { FileText, Book, User,Calendar,Building,AlertTriangle, Award, Scale, Globe, Mail } from "lucide-react";
 
 export default function TermsOfService() {
@@ -29,7 +29,7 @@ export default function TermsOfService() {
     <div className="relative min-h-screen flex flex-col items-start pt-20 justify-start overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100 dark:from-[#1a1b1c] dark:to-[#1c1d1e] transition-colors duration-500">
       <div className="absolute top-0 left-0 w-full h-full bg-[url('/assets/grid-pattern.svg')] opacity-20 dark:opacity-10" />
       
-      {/* <ParallaxSection speed={0.2} direction="up" className="z-10 container mx-auto px-4"> */}
+      <ParallaxSection speed={0.2} direction="up" className="z-10 container mx-auto px-4">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -162,7 +162,7 @@ export default function TermsOfService() {
             </motion.div>
           </div>
         </motion.div>
-      {/* </ParallaxSection> */}
+      </ParallaxSection>
     </div>
   );
 }
