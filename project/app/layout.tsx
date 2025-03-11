@@ -11,22 +11,6 @@ export const metadata: Metadata = {
   title: 'Webdrift - AI-Powered Web & App Development',
   description: 
     "Boost your business with AI-driven web & mobile apps. Webdrift offers cutting-edge digital solutions for students, enterprises, and entrepreneurs. Automate, scale, and grow with innovation!",
-  keywords: [
-    "Web development", "App development", "AI solutions", "Business automation",
-    "Enterprise scaling", "Entrepreneurs", "Digital transformation",
-    "Career growth", "AI-powered apps", "Next.js", "React", "Best web solutions"
-  ].join(", "),
-  openGraph: {
-    title: 'Webdrift - AI-Powered Web & App Development',
-    description: 
-      "Boost your business with AI-driven web & mobile apps. Webdrift offers cutting-edge digital solutions for students, enterprises, and entrepreneurs. Automate, scale, and grow with innovation!",
-    url: 'https://yourwebsite.com',
-    type: 'website',
-    siteName: 'Webdrift',
-   
-    
-  }
-
 };
 
 export default function RootLayout({
