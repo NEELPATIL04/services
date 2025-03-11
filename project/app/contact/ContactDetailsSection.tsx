@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Contact Tech Solutions | Web & App Development | Pune, India",
   description: `📞 Contact Tech Solutions – Expert IT Services, Web & App Development | Pune, India  
   Get in touch with **Tech Solutions** for top-tier **IT services, web & mobile app development, digital transformation, and business consultation**.  
-  Reach us via **email, phone, or visit our Pune office**. Let’s build your next big project!`,
+  Reach us via **email, phone, or visit our Pune office**. Let's build your next big project!`,
 };
 
 export const ContactDetailsSection = () => (
@@ -21,8 +21,8 @@ export const ContactDetailsSection = () => (
           <div>
             <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
             <p className="text-muted-foreground mb-8">
-              Fill out the form below and we'll get back to you as soon as
-              possible. We're excited to learn about your project and how we can
+              Fill out the form below and we&apos;ll get back to you as soon as
+              possible. We&apos;re excited to learn about your project and how we can
               help.
             </p>
 

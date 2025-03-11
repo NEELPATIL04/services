@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ParallaxSection } from "@/components/parallax-section";
+
 import { Server, Users, Cloud, Globe, Smartphone, RefreshCw, ChevronRight, Briefcase, ArrowLeft } from "lucide-react";
 
 export default function Services() {
@@ -98,7 +98,7 @@ export default function Services() {
     <div className="relative flex flex-col items-start pt-16 pb-0 justify-start bg-gradient-to-b from-gray-50 to-gray-100 dark:from-[#1a1b1c] dark:to-[#1c1d1e] transition-colors duration-500 h-auto">
       <div className="absolute top-0 left-0 w-full h-full bg-[url('/assets/grid-pattern.svg')] opacity-20 dark:opacity-10" />
       
-      <ParallaxSection speed={0.2} direction="up" className="z-10 container mx-auto px-4 mb-0 pb-0">
+      {/* <ParallaxSection speed={0.2} direction="up" className="z-10 container mx-auto px-4 mb-0 pb-0"> */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -194,7 +194,7 @@ export default function Services() {
             </motion.div>
           </div>
         </motion.div>
-      </ParallaxSection>
+      {/* </ParallaxSection> */}
       
       <style jsx global>{`
         html, body {
