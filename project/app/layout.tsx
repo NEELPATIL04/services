@@ -8,7 +8,7 @@ import Footer from '@/components/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Webdrift - AI-Powered Web & App Development',
+  title: 'Webdrift',
   description: 
     "Boost your business with AI-driven web & mobile apps. Webdrift offers cutting-edge digital solutions for students, enterprises, and entrepreneurs. Automate, scale, and grow with innovation!",
   keywords: [
@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     "Career growth", "AI-powered apps", "Next.js", "React", "Best web solutions"
   ].join(", "),
   openGraph: {
-    title: 'Webdrift - AI-Powered Web & App Development',
+    title: 'Webdrift',
     description: 
       "Boost your business with AI-driven web & mobile apps. Webdrift offers cutting-edge digital solutions for students, enterprises, and entrepreneurs. Automate, scale, and grow with innovation!",
-    url: 'https://yourwebsite.com',
+    url: 'https://webdrift.in',
     type: 'website',
     siteName: 'Webdrift',
    
