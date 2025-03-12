@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     "Career growth", "AI-powered apps", "Next.js", "React", "Best web solutions"
   ].join(", "),
   openGraph: {
-    title: 'Webdrift',
+    title: 'Webdrift - AI-Powered Web & App Development',
     description: 
       "Boost your business with AI-driven web & mobile apps. Webdrift offers cutting-edge digital solutions for students, enterprises, and entrepreneurs. Automate, scale, and grow with innovation!",
-    url: 'https://webdrift.in',
+    url: 'https://yourwebsite.com',
     type: 'website',
     siteName: 'Webdrift',
    

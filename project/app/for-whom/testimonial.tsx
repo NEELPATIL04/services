@@ -30,7 +30,7 @@ export function Testimonial({
   return (
     <div className="bg-card rounded-lg shadow p-6 h-full flex flex-col">
       <div className="mb-4">
-        <p className="italic text-muted-foreground">"{quote}"</p>
+        <p className="italic text-muted-foreground">&quot;{quote}&quot;</p>
       </div>
       <div className="mt-auto flex items-center">
         <div className="w-12 h-12 rounded-full overflow-hidden mr-4 flex-shrink-0">
