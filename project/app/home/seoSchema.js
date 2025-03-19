@@ -76,7 +76,7 @@ const seoSchema = {
         "@type": "CreativeWork",
         "name": "E-Commerce Platform",
         "description": "A high-performance e-commerce platform with advanced features.",
-        "url": "https://yourwebsite.com/"
+        "url": "https://yourwebsite.in"
       }
     ]
   };
