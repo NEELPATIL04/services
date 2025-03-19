@@ -38,7 +38,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="canonical" href="https://webdrift.com" />
+        <link rel="canonical" href="https://webdrift.in" />
       </head>
       <body className={inter.className}>
         <ThemeProvider
